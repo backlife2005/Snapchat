@@ -6,5 +6,6 @@ target 'Snapchat' do
   use_frameworks!
 
   # Pods for Snapchat
+pod 'Firebase'
 
 end
