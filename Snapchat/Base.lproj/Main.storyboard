@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-2D-b5D">
                                 <rect key="frame" x="160" y="275" width="55" height="30"/>
                                 <state key="normal" title="Turn Up"/>
+                                <connections>
+                                    <action selector="turnUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdm-Xd-VCg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,6 +65,10 @@
                             <constraint firstItem="B4f-aV-taq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yds-ef-TAb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="B4f-aV-taq" id="ccW-ZT-FbV"/>
+                        <outlet property="passwordTextField" destination="YY7-tM-oE4" id="KBw-9Q-qBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
