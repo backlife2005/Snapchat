@@ -27,7 +27,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eMail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-aV-taq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="backlife2005@gmail.com" borderStyle="roundedRect" placeholder="eMail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-aV-taq">
                                 <rect key="frame" x="87.5" y="151" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="6Ir-Tp-hGm"/>
@@ -36,14 +36,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-tM-oE4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="purpel" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-tM-oE4">
                                 <rect key="frame" x="87.5" y="211" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="gGU-xj-8yb"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-2D-b5D">
                                 <rect key="frame" x="160" y="275" width="55" height="30"/>
@@ -68,11 +68,49 @@
                     <connections>
                         <outlet property="emailTextField" destination="B4f-aV-taq" id="ccW-ZT-FbV"/>
                         <outlet property="passwordTextField" destination="YY7-tM-oE4" id="KBw-9Q-qBT"/>
+                        <segue destination="bov-lH-3eX" kind="presentation" identifier="signingInSegue" id="NoG-5T-5b9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="120.98950524737631"/>
+            <point key="canvasLocation" x="1047" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="081-wa-Edh">
+            <objects>
+                <viewController id="vHr-EI-ExW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fRp-fH-vVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="CEi-dF-okw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PaX-H1-ONI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OV6-Yc-hON"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1J5-mH-SKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2764" y="120.98950524737631"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KM5-NM-FM1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bov-lH-3eX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPh-wc-kB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vHr-EI-ExW" kind="relationship" relationship="rootViewController" id="cNL-Vn-tkH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7Y-m4-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="120.98950524737631"/>
         </scene>
     </scenes>
 </document>
