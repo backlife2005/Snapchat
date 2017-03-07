@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F76BD9861E6EDBED00EC0116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BD9851E6EDBED00EC0116 /* AppDelegate.swift */; };
-		F76BD9881E6EDBED00EC0116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BD9871E6EDBED00EC0116 /* ViewController.swift */; };
+		F76BD9881E6EDBED00EC0116 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BD9871E6EDBED00EC0116 /* SignInViewController.swift */; };
 		F76BD98B1E6EDBED00EC0116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76BD9891E6EDBED00EC0116 /* Main.storyboard */; };
 		F76BD98D1E6EDBED00EC0116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76BD98C1E6EDBED00EC0116 /* Assets.xcassets */; };
 		F76BD9901E6EDBED00EC0116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76BD98E1E6EDBED00EC0116 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		F274F9C120720341AF6B4935 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 		F76BD9821E6EDBED00EC0116 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76BD9851E6EDBED00EC0116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F76BD9871E6EDBED00EC0116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F76BD9871E6EDBED00EC0116 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F76BD98A1E6EDBED00EC0116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F76BD98C1E6EDBED00EC0116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F76BD98F1E6EDBED00EC0116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				F76BD9851E6EDBED00EC0116 /* AppDelegate.swift */,
-				F76BD9871E6EDBED00EC0116 /* ViewController.swift */,
+				F76BD9871E6EDBED00EC0116 /* SignInViewController.swift */,
 				F76BD9891E6EDBED00EC0116 /* Main.storyboard */,
 				F76BD98C1E6EDBED00EC0116 /* Assets.xcassets */,
 				F76BD98E1E6EDBED00EC0116 /* LaunchScreen.storyboard */,
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F76BD9881E6EDBED00EC0116 /* ViewController.swift in Sources */,
+				F76BD9881E6EDBED00EC0116 /* SignInViewController.swift in Sources */,
 				F76BD9861E6EDBED00EC0116 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +381,7 @@
 				F76BD9961E6EDBED00EC0116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

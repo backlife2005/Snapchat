@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInViewController.swift
 //  Snapchat
 //
 //  Created by Mohammed Al-Khonaizi on 3/7/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
