@@ -117,8 +117,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cool.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-KZ-Q5g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-KZ-Q5g">
                                 <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.85300481959230767" green="0.85300481959230767" blue="0.85300481959230767" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ycv-bH-Irq"/>
                                     <constraint firstAttribute="width" constant="240" id="z5p-7W-wKp"/>
@@ -185,7 +186,4 @@
             <point key="canvasLocation" x="1824.8" y="120.98950524737631"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Cool.jpg" width="2560" height="1440"/>
-    </resources>
 </document>
