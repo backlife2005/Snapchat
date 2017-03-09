@@ -161,11 +161,30 @@
                         <outlet property="descriptionTextField" destination="V5B-sX-RZV" id="M98-Ch-epK"/>
                         <outlet property="imageView" destination="Bak-KZ-Q5g" id="SNr-ig-Qlv"/>
                         <outlet property="nextButton" destination="p0H-kF-ilI" id="QSa-52-unZ"/>
+                        <segue destination="qSF-XL-Yyr" kind="show" identifier="selectUserSegue" id="Y8N-9X-Z4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glD-xE-QiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3577" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Hn-0R-Ac5">
+            <objects>
+                <viewController id="qSF-XL-Yyr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v45-fL-wJB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1oJ-PU-GGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5HA-bT-psh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqM-sC-ram" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4354" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM5-NM-FM1">
