@@ -40,7 +40,10 @@ class SignInViewController: UIViewController {
                     if error != nil {
                         
                         print("Hey we have an error: \(error)")
+                        
                     } else {
+                        
+                        FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                         
                         print("Created a user Successfully")
                         
