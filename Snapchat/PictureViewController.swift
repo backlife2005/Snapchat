@@ -51,21 +51,25 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 2) Sets the images folder
         // 3) Sets the image data format (PNG or Jpg)
         // 4) Uploads the image to Firebase.
-        // 5) Handle error if any. Otherwise, switch to the View Controller which shows the uses 
+        // 5) Handle error if any. Otherwise, switch to the View Controller which shows the uses
         
         nextButton.isEnabled = false
         
         let imagesFolder = FIRStorage.storage().reference().child("images")
         
-        let imageData = UIImagePNGRepresentation(imageView.image!)!
+        let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        imagesFolder.child("images.png").put(imageData, metadata: nil, completion: {(metadata, error) in
+        imagesFolder.child("\(NSUUID().uuidString).jpg").put(imageData, metadata: nil, completion: {(metadata, error) in
             
             if error != nil {
                 
                 print("We tried to upload!r \(error)")
                 
             } else {
+                
+                let downloadURL = metadata?.downloadURL()
+                
+                print(downloadURL as Any)
                 
                 self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
                 

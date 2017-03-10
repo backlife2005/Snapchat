@@ -60,7 +60,10 @@ class SignInViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        FIRDatabase.database().reference().child("Hello").setValue("I am cool")
         
     }
     
