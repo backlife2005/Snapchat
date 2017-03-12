@@ -78,7 +78,7 @@
         <!--Snaps View Controller-->
         <scene sceneID="081-wa-Edh">
             <objects>
-                <viewController id="vHr-EI-ExW" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vHr-EI-ExW" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fRp-fH-vVZ"/>
                         <viewControllerLayoutGuide type="bottom" id="CEi-dF-okw"/>
@@ -86,7 +86,20 @@
                     <view key="view" contentMode="scaleToFill" id="PaX-H1-ONI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJv-TP-WZN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EJv-TP-WZN" firstAttribute="leading" secondItem="PaX-H1-ONI" secondAttribute="leading" id="1AM-Em-hX0"/>
+                            <constraint firstItem="EJv-TP-WZN" firstAttribute="top" secondItem="fRp-fH-vVZ" secondAttribute="bottom" id="EtX-v5-Q85"/>
+                            <constraint firstItem="EJv-TP-WZN" firstAttribute="centerX" secondItem="PaX-H1-ONI" secondAttribute="centerX" id="JDd-0z-c5U"/>
+                            <constraint firstAttribute="trailing" secondItem="EJv-TP-WZN" secondAttribute="trailing" id="O9E-55-IgB"/>
+                            <constraint firstItem="CEi-dF-okw" firstAttribute="top" secondItem="EJv-TP-WZN" secondAttribute="bottom" id="evw-9V-rEZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OV6-Yc-hON">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="8nN-Yv-IDB">
@@ -100,6 +113,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EJv-TP-WZN" id="Jeq-n6-pnU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1J5-mH-SKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
