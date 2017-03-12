@@ -52,26 +52,47 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 3) Sets the image data format (PNG or Jpg)
         // 4) Uploads the image to Firebase.
         // 5) Handle error if any. Otherwise, switch to the View Controller which shows the uses
-        
+        print("")
+        print("**************************")
+        print("")
+        print("")
+        print("Beginning the process to upload the selected image...")
         nextButton.isEnabled = false
-        
+        print("")
+        print("")
+        print("The next button has been disabled temporarily...")
         let imagesFolder = FIRStorage.storage().reference().child("images")
-        
+        print("")
+        print("")
+        print("The selected image will be store into \(imagesFolder) in Firebase Storage...")
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
-        
-        imagesFolder.child("\(NSUUID().uuidString).jpg").put(imageData, metadata: nil, completion: {(metadata, error) in
-            
+        print("")
+        print("")
+        print("The image will be save as jpg image at the qaulity ration of 0.1")
+        let imageFileName = "\(NSUUID().uuidString).jpg"
+        imagesFolder.child(imageFileName).put(imageData, metadata: nil, completion: {(metadata, error) in
+            print("")
+            print("**************************")
+            print("")
+            print("")
+            print("The image file was given the name of \(imageFileName)")
             if error != nil {
                 
-                print("We tried to upload!r \(error)")
+                print("We tried to upload! \(error)")
                 
             } else {
+                print("")
+                print("")
+                print("The image was saved successfuly.")
+                let imageDownloadURL = metadata?.downloadURL()!.absoluteString
+                print("")
+                print("")
+                print("The image \(imageFileName) can be downloaded via the following URL \(imageDownloadURL)")
                 
-                let downloadURL = metadata?.downloadURL()
-                
-                print(downloadURL as Any)
-                
-                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()!.absoluteString)
+                self.performSegue(withIdentifier: "selectUserSegue", sender: imageDownloadURL)
+                print("")
+                print("")
+                print("A request has been initiated to perfor a segue to select a user by the \(sender)")
                 
             }
         }

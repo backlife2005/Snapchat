@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,12 +110,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cbV-UW-3zn">
                             <connections>
-                                <segue destination="tLI-dF-8r1" kind="show" id="kJz-qw-omN"/>
+                                <segue destination="tLI-dF-8r1" kind="show" identifier="pictureSelectionSegue" id="kJz-qw-omN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EJv-TP-WZN" id="Jeq-n6-pnU"/>
+                        <segue destination="Dv5-hD-5Im" kind="show" identifier="viewSnapSegue" id="M5w-2P-hwP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1J5-mH-SKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-KZ-Q5g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-KZ-Q5g">
                                 <rect key="frame" x="67" y="84" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.85300481959230767" green="0.85300481959230767" blue="0.85300481959230767" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -216,6 +218,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqM-sC-ram" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4354" y="121"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="xmS-Yk-U8F">
+            <objects>
+                <viewController id="Dv5-hD-5Im" customClass="ViewSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nz8-jc-miH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQJ-eK-gFw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9fC-GB-gIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This me saying hello." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1r-ME-pbI">
+                                <rect key="frame" x="36" y="631" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0hf-w1-GTv">
+                                <rect key="frame" x="26" y="89" width="323" height="532"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G1r-ME-pbI" firstAttribute="top" secondItem="0hf-w1-GTv" secondAttribute="bottom" constant="10" id="147-0p-dOm"/>
+                            <constraint firstItem="0hf-w1-GTv" firstAttribute="top" secondItem="nz8-jc-miH" secondAttribute="bottom" constant="25" id="2qB-ew-3cp"/>
+                            <constraint firstItem="gQJ-eK-gFw" firstAttribute="top" secondItem="G1r-ME-pbI" secondAttribute="bottom" constant="15" id="5l4-tN-Yjp"/>
+                            <constraint firstItem="G1r-ME-pbI" firstAttribute="leading" secondItem="9fC-GB-gIZ" secondAttribute="leadingMargin" constant="20" id="Eae-Zg-Vcu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0hf-w1-GTv" secondAttribute="trailing" constant="10" id="Jv0-NV-CXd"/>
+                            <constraint firstItem="0hf-w1-GTv" firstAttribute="leading" secondItem="9fC-GB-gIZ" secondAttribute="leadingMargin" constant="10" id="nyb-O9-C8f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G1r-ME-pbI" secondAttribute="trailing" constant="20" id="oIf-tZ-DDF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="snapDescriptionLable" destination="G1r-ME-pbI" id="AQD-aw-Ld7"/>
+                        <outlet property="snapImageView" destination="0hf-w1-GTv" id="m7S-Qp-pvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gK9-Za-qv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2764" y="808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM5-NM-FM1">
