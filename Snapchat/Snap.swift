@@ -17,4 +17,8 @@ class Snap {
     
     var snapFrom = ""
     
+    var key = ""
+    
+    
+    
 }

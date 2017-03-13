@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Firebase
+
 import SDWebImage
 
 class ViewSnapViewController: UIViewController {
@@ -33,6 +35,18 @@ class ViewSnapViewController: UIViewController {
         
     }
 
-
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        print("Goodbye")
+        
+        // This is not part of the course, I added this myself.
+        // let currentLoggedUserUID = FIRAuth.auth()!.currentUser!.uid
+        // FIRDatabase.database().reference().child("users").child(currentLoggedUserUID).child("Snaps").child(snap.key).removeValue()
+        
+        // This is how it was done in the course
+        
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("Snaps").child(snap.key).removeValue()
+        
+    }
 
 }
