@@ -8,6 +8,8 @@
 
 import UIKit
 
+import SDWebImage
+
 class ViewSnapViewController: UIViewController {
     
     // @IBOutlet
@@ -26,6 +28,8 @@ class ViewSnapViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         snapDescriptionLable.text = snap.snapImageDescription
+        
+        snapImageView.sd_setImage(with: URL (string: snap.snapImageURL))
         
     }
 
