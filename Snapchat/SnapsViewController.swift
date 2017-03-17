@@ -21,7 +21,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func logoutTapped(_ sender: Any) {
         
+        print ("\n \n The current signed in user has been logged out successfully \n \n")
         dismiss(animated: true, completion: nil)
+        
         
     }
     
@@ -62,7 +64,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             snap.snapImageURL = (snapshot.value as! NSDictionary) ["imageURL"] as! String  // Stores the email
             
-            snap.key = snapshot.key  // Stores the key for the uid which assigned to the snap.
+            snap.key = snapshot.key // Stores the key for the uid which assigned to the snap.
             
             
             self.snaps.append(snap)  // Adds the content of the local user constant to the users property variable
@@ -71,28 +73,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         })
         
-        FIRDatabase.database().reference().child("users").child(currentLoggedUser).child("snaps").observe(FIRDataEventType.childRemoved, with: {(snapshot) in
-            
-            print(snapshot) // Print content of snapshot
-            
-            
-            let snap = Snap ()  // Declaration of the local instance constant of Snap class
-            
-            
-            snap.snapFrom = (snapshot.value as! NSDictionary) ["from"] as! String  // Stores the email
-            
-            snap.snapImageDescription = (snapshot.value as! NSDictionary) ["description"] as! String  // Stores the email
-            
-            snap.snapImageURL = (snapshot.value as! NSDictionary) ["imageURL"] as! String  // Stores the email
-            
-            snap.key = snapshot.key  // Stores the key for the uid which assigned to the snap.
-            
-            
-            self.snaps.append(snap)  // Adds the content of the local user constant to the users property variable
-            
-            self.tableView.reloadData()  // Cuases to the code within cellForRowAt indexPath to be executed.
-            
-        })
+        
 
         
     }

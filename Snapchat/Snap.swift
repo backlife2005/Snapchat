@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Firebase
+
 class Snap {
     
     
@@ -19,6 +21,17 @@ class Snap {
     
     var key = ""
     
+}
+
+func removeSnap (snapKey : String){
+    
+    let uid = FIRAuth.auth()!.currentUser!.uid
+    let ref = FIRDatabase.database().reference()
+    let snap = ref.child("users").child(uid).child("snaps").child(snapKey)
+    
+    snap.removeValue()
     
     
+    
+    // FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").child(snap.key).removeValue()
 }
