@@ -6,9 +6,11 @@
 //  Copyright © 2017 Mohammed Al-Khonaizi. All rights reserved.
 //
 
+
 import Foundation
 
 import Firebase
+
 
 class Snap {
     
@@ -23,15 +25,23 @@ class Snap {
     
 }
 
-func removeSnap (snapKey : String){
+struct SnapData {
     
-    let uid = FIRAuth.auth()!.currentUser!.uid
-    let ref = FIRDatabase.database().reference()
-    let snap = ref.child("users").child(uid).child("snaps").child(snapKey)
+    var snapImageDescription = ""
     
-    snap.removeValue()
+    var snapImageURL = ""
     
+    var snapFrom = ""
     
-    
-    // FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").child(snap.key).removeValue()
+    var key = ""
 }
+
+
+class fb {
+    
+    var uid = FIRAuth.auth()!.currentUser!.uid
+    
+    var ref = FIRDatabase.database().reference()
+    
+}
+

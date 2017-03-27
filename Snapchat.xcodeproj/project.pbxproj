@@ -19,6 +19,7 @@
 		F76BD9981E6EE56500EC0116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F76BD9971E6EE56500EC0116 /* GoogleService-Info.plist */; };
 		F778EFD41E7035C4000B2EBA /* Cool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F778EFD31E7035C4000B2EBA /* Cool.jpg */; };
 		F778EFD61E703671000B2EBA /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778EFD51E703671000B2EBA /* PictureViewController.swift */; };
+		F7AED7C91E7E07EF00D84961 /* delegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AED7C81E7E07EF00D84961 /* delegation.swift */; };
 		F7C7DAB71E6F1D8B00425F93 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7DAB61E6F1D8B00425F93 /* SnapsViewController.swift */; };
 		F89034D6BEBA560CEB1F5B38 /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC4A0176E92F2AFE754AADE /* Pods_Snapchat.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		F777DA871E6F171C000FDE8E /* Snapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapchat.entitlements; sourceTree = "<group>"; };
 		F778EFD31E7035C4000B2EBA /* Cool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cool.jpg; sourceTree = "<group>"; };
 		F778EFD51E703671000B2EBA /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		F7AED7C81E7E07EF00D84961 /* delegation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = delegation.swift; sourceTree = "<group>"; };
 		F7C7DAB61E6F1D8B00425F93 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				F7C7DAB61E6F1D8B00425F93 /* SnapsViewController.swift */,
 				F76BD9871E6EDBED00EC0116 /* SignInViewController.swift */,
 				F75E29601E75594B000AEEEC /* Snap.swift */,
+				F7AED7C81E7E07EF00D84961 /* delegation.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75E295B1E722DD2000AEEEC /* SelecUserViewController.swift in Sources */,
+				F7AED7C91E7E07EF00D84961 /* delegation.swift in Sources */,
 				F76BD9881E6EDBED00EC0116 /* SignInViewController.swift in Sources */,
 				F75E295D1E724CDF000AEEEC /* User.swift in Sources */,
 				F75E29631E7575CC000AEEEC /* ViewSnapViewController.swift in Sources */,

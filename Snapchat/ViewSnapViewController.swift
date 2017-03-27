@@ -12,6 +12,7 @@ import Firebase
 
 import SDWebImage
 
+
 class ViewSnapViewController: UIViewController {
     
     // @IBOutlet
@@ -25,6 +26,9 @@ class ViewSnapViewController: UIViewController {
     
     var snap = Snap ()
     
+    let mySnaps = Snaps () // Instantiate the Snaps () Class
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +37,7 @@ class ViewSnapViewController: UIViewController {
         snapDescriptionLable.text = snap.snapImageDescription
         
         snapImageView.sd_setImage(with: URL(string: snap.snapImageURL))
+
         
     }
     
@@ -45,7 +50,8 @@ class ViewSnapViewController: UIViewController {
          
          */
         
-        removeSnap(snapKey: snap.key) // my function
+        mySnaps.removeSanp(snapKey: snap.key)
+        
         
     }
     
